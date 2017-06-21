@@ -82,6 +82,10 @@ public class JAXBUtility {
 		return marshalObject(jaxbObject, schemaFileUrl, errorCollector, null);
 	}
 	
+	public static String marshalObject(Object jaxbObject, URL schemaFileUrl, NamespacePrefixMapper namespacePrefixMapper) {
+		return marshalObject(jaxbObject, schemaFileUrl, null, namespacePrefixMapper);
+	}
+	
 	public static String marshalObjectWithoutValidation(Object jaxbObject, NamespacePrefixMapper namespacePrefixMapper) {
 		return marshalObject(jaxbObject, null, null, namespacePrefixMapper);
 	}
